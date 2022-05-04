@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<myDetails>
+    <people>
+        <name>Reema </name>
+        <hobby>Reading,Travelling</hobby>
+    </people>
+    <people>
+        <name>Helina</name>
+        <hobby>Cooking, Singing</hobby>    
+    </people>
+</myDetails>
