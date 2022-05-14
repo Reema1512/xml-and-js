@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet href="style.css"?>
+<!DOCTYPE address [
+   <!ELEMENT address (name,company,phone)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT company (#PCDATA)>
+   <!ELEMENT phone (#PCDATA)>
+]>
 <menuInfo>
   <title>Chester's Breakfast Menu</title>
   <summary>
@@ -8,7 +15,7 @@
     up just the way you like them!!
     ]]>
   </summary>
-  <effective Date>03/12/2016</effective Date>
+  <effective_Date>03/12/2016</effective_Date>
   <menu>
     <category>Traditional Favorites</category>
     <menuItem>
@@ -28,7 +35,7 @@
     </menuItem>
     <menuItem>
       <itemName>
-        <originalName> Fresh Mornin' Sampler </originalname>
+        <originalName> Fresh Mornin' Sampler </originalName>
         <oldName> Mornin' Sampler </oldName>
       </itemName>
       <description>
@@ -48,7 +55,7 @@
     <category>Lite and Quick</category>
     <menuItem>
       <itemName>
-        <name> Oatmeal Breakfast </originalName>
+        <name> Oatmeal Breakfast </name>
       </itemName>
       <description>
         <![CDATA[
@@ -80,3 +87,6 @@
     </menuItem>
   </menu>
 </menuInfo>
+
+<!-- Reema Patel -->
+<!-- N01517868 -->
