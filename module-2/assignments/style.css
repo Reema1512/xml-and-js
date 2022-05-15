@@ -1,5 +1,9 @@
-#originalName
+originalName
 {
     font-size: x-large;
     color: brown;
+}
+category
+{
+    white-space: pre-line;
 }
