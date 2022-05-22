@@ -7,7 +7,7 @@
   <!ATTLIST product product_image CDATA #REQUIRED>
   <!ELEMENT product (catalog_item+)>
   <!ATTLIST catalog_item gender CDATA #REQUIRED>
-  <!ELEMENT catalog_item (item_number, price, size+ )>
+  <!ELEMENT catalog_item (item_number, price, size+)>
   <!ELEMENT item_number (#PCDATA)>
   <!ELEMENT price (#PCDATA)>
   <!ELEMENT size (color_swatch+)>
