@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zoo HTML</title>
+</head>
+<body>
+
+<table  id="Zoo_Data"  border="2" style="text-align:center"></table>
+<script>
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) 
+    {
+      displayData(this);
+    }
+  };
+  xmlhttp.open("GET", "zoo.xml", true);
+  xmlhttp.send();
+
+function displayData(xml) {
+  let i;
+  let xmlDoc = xml.responseXML;
+  let table="<tr><th>ID</th><th>Open Time</th><th>City</th><th>Region</th><th>Country</th><th>Give Name</th><th>Commom Name</th><th>Scientific Name</th><th>Animal's DOB</th><th>SEX</th><th>Employee's Id</th><th>First Name</th><th>Last Name</th><th>Employee's DOB</th><th>Position</th></tr>";
+  let x = xmlDoc.getElementsByTagName("zoo");
+  let y = xmlDoc.getElementsByTagName("employees");
+
+  for (i = 0; i <x.length; i++) 
+  { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue + "</td><td>" +
+    x[i].getElementsByTagName("openTime")[0].childNodes[0].nodeValue + "</td><td>"+
+    x[i].getElementsByTagName("city")[0].childNodes[0].nodeValue +  "</td><td>"+
+    x[i].getElementsByTagName("region")[0].childNodes[0].nodeValue + "</td><td>"+ 
+    x[i].getElementsByTagName("counry")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    x[i].getElementsByTagName("giveName")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    x[i].getElementsByTagName("commonName")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    x[i].getElementsByTagName("scientificName")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    x[i].getElementsByTagName("dob")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    x[i].getElementsByTagName("sex")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    x[i].getElementsByTagName("firstName")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    x[i].getElementsByTagName("lastName")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    y[i].getElementsByTagName("dob")[0].childNodes[0].nodeValue+"</td><td>"+ 
+    x[i].getElementsByTagName("position")[0].childNodes[0].nodeValue+"</td></tr>";
+  }
+  document.getElementById("Zoo_Data").innerHTML = table;
+}
+</script>
+</body>
+</html>
+
+
