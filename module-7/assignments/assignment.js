@@ -30,3 +30,4 @@ const result=data
 .filter((number) => number>75)
 .reduce((acc,n1) =>  acc <n1.number ? acc : n1);
 console.log(result);
+
